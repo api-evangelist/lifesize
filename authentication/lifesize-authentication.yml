@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+docs: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+notes: >-
+  Lifesize publishes no OpenAPI or Swagger definition, so this profile is captured
+  from the Lifesize Icon API overview documentation rather than derived from
+  securitySchemes. Lifesize was acquired by Enghouse Systems in 2023; the developer
+  documentation remains hosted on support.lifesize.com.
+summary:
+  types:
+  - http
+  api_key_in: []
+  oauth2_flows: []
+  transport:
+  - https
+  - ssh
+schemes:
+- name: adminCredentials
+  type: http
+  scheme: basic
+  description: >-
+    Access to the Lifesize Icon automation API uses the same authentication policy as
+    browser access to the system. Sign in to the Lifesize video system through an SSH
+    or HTTP connection over the network with administrator credentials. The documented
+    default username and password are "admin"; Lifesize documents changing system
+    passwords as part of first-run configuration.
+  sources:
+  - https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+  applies_to:
+  - Lifesize Icon Automation API (REST)
+  - Lifesize Automation Command Line Interface (CLI)
+  default_credentials_documented: true
+  credential_rotation_docs: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/lets-get-started/system-access-and-passwords/
+account_level_identity:
+  sso:
+    supported: true
+    scope: Lifesize Admin Console (account sign-in, not API authentication)
+    providers:
+    - Microsoft Azure AD
+    docs: https://support.lifesize.com/product/lifesize-admin-console/account-settings/sso-configuration/configure-using-microsoft-azure/
+not_found:
+- oauth2 authorization server or documented scopes
+- published API keys or token issuance for the Lifesize Cloud API
+- /.well-known/openid-configuration or /.well-known/oauth-authorization-server on any
+  Lifesize host (all probed hosts returned 403 or 404 on 2026-07-19)
