@@ -1,28 +1,166 @@
 aid: lifesize
 name: Lifesize
-description: 'Lifesize is a company surfaced as a portfolio company of norwest-venture-partners, redpoint-ventures
-  and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: 'Lifesize is a video conferencing and meeting-room platform — cloud meeting
+  service (Lifesize Cloud), Icon conference-room systems, the Lifesize Share wireless
+  presentation appliance, Phone HD, and the web/desktop/mobile apps — originally founded
+  in Austin, Texas. Lifesize merged with contact-center provider Serenova (CxEngage)
+  in 2020 and was acquired by Enghouse Systems in 2023; the video business now operates
+  as Enghouse Video (Vidyo Inc.) and the Lifesize brand and product line continue under
+  enghousevideo.com/lifesize. The developer surface is an on-device automation API on
+  the Lifesize Icon series: a REST interface and a Lifesize Automation Command Line
+  Interface (CLI) reachable over HTTPS or SSH with administrator credentials, both
+  self-documenting on the device itself, used to read configuration, change system
+  preferences, report call status and statistics, and control calls. Lifesize also
+  runs a hosted cloud service API host and publishes chat (Slack, Microsoft Teams) and
+  calendar (Google Workspace, Microsoft 365) integrations, dated release notes, and an
+  Atlassian-hosted status page.'
 url: https://raw.githubusercontent.com/api-evangelist/lifesize/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.enghousevideo.com/wp-content/uploads/2024/04/Enghouse-lifesize-icon-white.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - norwest-venture-partners
 - redpoint-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: Enghouse Systems
+x-acquired-year: 2023
+x-operates-as: Enghouse Video (Vidyo Inc.)
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-- Unknown
-apis: []
+- Video Conferencing
+- Communications
+- Collaboration
+- Meetings
+- Unified Communications
+- Video
+- Contact Center
+- Conference Room Systems
+- Streaming
+apis:
+- aid: lifesize:icon-automation-api
+  name: Lifesize Icon Automation API
+  description: 'The automation and control interface built into Lifesize Icon video
+    systems (models 300, 400, 450, 500, 600, 700, 800). It exposes a REST method for
+    accessing a set of resources through a fixed set of operations, plus the Lifesize
+    Automation Command Line Interface (CLI) for command-based control. Reachable over
+    an HTTPS or SSH connection to the system on the network, authenticated with the
+    same administrator credentials used for browser access. The API is self-documenting
+    on the device: the REST reference is served at /docs/json and the CLI reference at
+    /docs/clish. Commands take the form "<actor> <command> <parameters>" and cover
+    retrieving configuration (system version, camera settings), modifying preferences
+    (speaker volume, bandwidth, auto-answer), displaying call status and statistics,
+    and controlling calls (adding participants, emulating remote-control functions).'
+  humanURL: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+  baseURL: https://{videoSystemIPAddress}/docs/json
+  tags:
+  - Video Conferencing
+  - Device Management
+  - Automation
+  - Room Systems
+  properties:
+  - type: APIReference
+    url: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+  - type: Documentation
+    url: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/
+  - type: GettingStarted
+    url: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/lets-get-started/
+  - type: Authentication
+    url: authentication/lifesize-authentication.yml
+  - type: CLI
+    url: cli/lifesize-cli.yml
+  - type: ChangeLog
+    url: https://support.lifesize.com/product/release-notes/icon-400-450-600/
+- aid: lifesize:cloud-api
+  name: Lifesize Cloud API
+  description: 'The hosted service API behind the Lifesize Cloud meeting service, the
+    Lifesize Admin Console, and the web/desktop/mobile applications. The host is live
+    and serves JSON from an AWS API Gateway edge, returning HTTP 403 to unauthenticated
+    callers; Lifesize does not publish a public developer portal or reference for it,
+    so this entry records the observed production host and the administrative surfaces
+    that consume it rather than a documented contract.'
+  humanURL: https://admin.lifesizecloud.com/
+  baseURL: https://api.lifesizecloud.com
+  tags:
+  - Video Conferencing
+  - Meetings
+  - Cloud
+  properties:
+  - type: Documentation
+    url: https://support.lifesize.com/product/lifesize-admin-console/
+  - type: GettingStarted
+    url: https://support.lifesize.com/product/lifesize-admin-console/get-started/
+  - type: ChangeLog
+    url: https://support.lifesize.com/product/release-notes/cloud-services/
+  - type: StatusPage
+    url: https://status.lifesizecloud.com/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/lifesize-domain-security.yml
 - type: Website
   url: https://lifesize.com
+- type: DeveloperPortal
+  url: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+- type: Documentation
+  url: https://support.lifesize.com/
+- type: APIReference
+  url: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+- type: GettingStarted
+  url: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/lets-get-started/
+- type: Support
+  url: https://support.lifesize.com/
+- type: HelpCenter
+  url: https://customer.support.enghouse.com/servicedesk/customer/portal/19
+- type: SignUp
+  url: https://call.lifesizecloud.com/
+- type: Login
+  url: https://admin.lifesizecloud.com/
+- type: TermsOfService
+  url: https://www.enghousevideo.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.enghousevideo.com/privacy-policy
+- type: StatusPage
+  url: https://status.lifesizecloud.com/
+- type: ChangeLog
+  url: https://support.lifesize.com/product/release-notes/
+- type: Downloads
+  url: https://support.lifesize.com/
+- type: Authentication
+  url: authentication/lifesize-authentication.yml
+- type: Conventions
+  url: conventions/lifesize-conventions.yml
+- type: CLI
+  url: cli/lifesize-cli.yml
+- type: Lifecycle
+  url: lifecycle/lifesize-lifecycle.yml
+- type: ChangeLog
+  name: Lifesize changelog artifact
+  url: changelog/lifesize-changelog.yml
+- type: Conformance
+  url: conformance/lifesize-conformance.yml
+- type: LLMsTxt
+  url: llms/lifesize-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
