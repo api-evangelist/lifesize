@@ -1,0 +1,72 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+note: >-
+  Lifesize publishes no OpenAPI definition, so nothing here is derived from a machine
+  contract. Every entry is asserted from the published support documentation, or marked
+  false where the documentation is silent. Absence of evidence is recorded as
+  conforms: false, not as unknown-favourable.
+standards:
+- id: rest
+  conforms: true
+  evidence: >-
+    API overview states "The API supports a REST method for accessing a set of resources,
+    or objects, through a fixed set of operations."
+- id: sip
+  conforms: true
+  evidence: >-
+    Lifesize Icon and Admin Console document SIP registration of third-party devices
+    (Polycom HDX, Cisco SX20/C-series, Cisco C60) and SIP filtering controls.
+  docs: https://support.lifesize.com/product/lifesize-admin-console/manage-room-systems/third-party-device-registration/sip/
+- id: h323
+  conforms: true
+  evidence: >-
+    Lifesize Icon and Admin Console document H.323 registration of third-party devices
+    and H.323 anti-spam filtering.
+  docs: https://support.lifesize.com/product/lifesize-admin-console/manage-room-systems/third-party-device-registration/h-323/
+- id: saml-sso
+  conforms: true
+  evidence: >-
+    Admin Console SSO configuration is documented against Microsoft Azure AD.
+  docs: https://support.lifesize.com/product/lifesize-admin-console/account-settings/sso-configuration/configure-using-microsoft-azure/
+- id: ssh
+  conforms: true
+  evidence: API overview documents signing in to the video system over an SSH connection.
+- id: tls-https
+  conforms: true
+  evidence: >-
+    All Lifesize public hosts probed on 2026-07-19 answered over HTTPS; see
+    security/lifesize-domain-security.yml.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth 2.0 authorization server, flows, or scopes documented.
+- id: oidc
+  conforms: false
+  evidence: >-
+    /.well-known/openid-configuration returned 403 or 404 on every probed Lifesize host.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No error contract or application/problem+json usage documented.
+- id: rfc8594-sunset
+  conforms: false
+  evidence: No deprecation policy or Sunset/Deprecation header support documented.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 403 or 404 on every probed Lifesize host.
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI or Swagger document published; the device serves its own JSON reference at
+    /docs/json but no machine-readable contract is distributed.
+- id: asyncapi
+  conforms: false
+  evidence: No event, streaming, or webhook developer surface published.
+- id: scim
+  conforms: false
+  evidence: No SCIM provisioning endpoints documented.
+compliance_program:
+  published: false
+  detail: >-
+    No Lifesize-branded trust center or named certification list (SOC 2, ISO 27001, HIPAA,
+    PCI DSS, FedRAMP) was found on lifesize.com, support.lifesize.com, or the Enghouse
+    Video successor site. No Compliance pointer is emitted.

@@ -1,0 +1,62 @@
+# Lifesize
+
+> Lifesize is a video conferencing and meeting-room platform — Lifesize Cloud meeting
+> service, Icon conference-room systems, Lifesize Share wireless presentation, Phone HD,
+> and web/desktop/mobile apps. Lifesize merged with contact-center provider Serenova
+> (CxEngage) in 2020 and was acquired by Enghouse Systems in 2023; the video business now
+> operates as Enghouse Video (Vidyo Inc.) and the Lifesize brand continues at
+> enghousevideo.com/lifesize. The developer surface is an on-device automation API on the
+> Lifesize Icon series — a REST interface plus the Lifesize Automation Command Line
+> Interface (CLI) — reached over HTTPS or SSH with administrator credentials.
+>
+> generated: 2026-07-19 | method: generated | source: apis.yml + repo artifacts
+> No provider-published /llms.txt was found (probed 2026-07-19; 403 or 404 on every host).
+
+## APIs
+
+- [Lifesize Icon Automation API](https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/): REST plus CLI control interface built into Lifesize Icon systems (models 300–800). Self-documenting on the device at /docs/json (REST) and /docs/clish (CLI). Covers configuration retrieval, preference changes, call status and statistics, and call control.
+- [Lifesize Cloud API](https://admin.lifesizecloud.com/): the hosted service API behind Lifesize Cloud, the Admin Console, and the client apps. Base host https://api.lifesizecloud.com is live but undocumented publicly and returns HTTP 403 to unauthenticated callers.
+
+## Specs
+
+- No OpenAPI, Swagger, GraphQL, or AsyncAPI definition is published by Lifesize. The Icon system serves its own JSON reference at https://{videoSystemIPAddress}/docs/json but distributes no machine-readable contract.
+
+## Docs
+
+- [API overview](https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/)
+- [Lifesize support site](https://support.lifesize.com/)
+- [Icon 400/450/600/800 documentation](https://support.lifesize.com/product/lifesize-icon-400-450-600-800/)
+- [Icon getting started](https://support.lifesize.com/product/lifesize-icon-400-450-600-800/lets-get-started/)
+- [Admin Console documentation](https://support.lifesize.com/product/lifesize-admin-console/)
+- [Release notes index](https://support.lifesize.com/product/release-notes/)
+- [Cloud Services release notes](https://support.lifesize.com/product/release-notes/cloud-services/)
+- [Service status](https://status.lifesizecloud.com/)
+- [Enghouse Video support portal](https://customer.support.enghouse.com/servicedesk/customer/portal/19)
+
+## Integrations
+
+- [Slack chat integration](https://support.lifesize.com/product/lifesize-admin-console/chat-integration/slack/)
+- [Microsoft Teams chat integration](https://support.lifesize.com/product/lifesize-admin-console/chat-integration/microsoft-teams/)
+- [Calendar integration (Google Workspace, Microsoft 365)](https://support.lifesize.com/product/lifesize-admin-console/get-started/account-configuration/configure-calendar-integration/)
+- [Third-party SIP/H.323 device registration](https://support.lifesize.com/product/lifesize-admin-console/manage-room-systems/third-party-device-registration/sip/)
+
+## API Evangelist artifacts
+
+- authentication/lifesize-authentication.yml — administrator credentials over HTTPS/SSH; no OAuth, no API keys
+- conventions/lifesize-conventions.yml — REST resource model, CLI command syntax, no idempotency or rate-limit contract
+- cli/lifesize-cli.yml — the Lifesize Automation CLI command surface
+- lifecycle/lifesize-lifecycle.yml — product-release versioning, status page, no deprecation policy
+- changelog/lifesize-changelog.yml — recent dated Cloud Services release entries
+- conformance/lifesize-conformance.yml — REST/SIP/H.323/SAML yes; OAuth/OIDC/OpenAPI/AsyncAPI no
+- well-known/lifesize-well-known.yml — /.well-known probe results (none found)
+- security/lifesize-domain-security.yml — TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe
+
+## Not available
+
+- No SDKs or client libraries on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist, or crates.io
+- No public GitHub organization
+- No MCP server
+- No webhooks, events, or AsyncAPI surface
+- No sandbox, test credentials, or public Postman collection
+- No OAuth scopes, error-code registry, or decline codes
+- No published pricing page or trust center for the Lifesize brand

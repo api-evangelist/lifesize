@@ -1,0 +1,67 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.lifesize.com/product/release-notes/
+versioning:
+  scheme: product-release
+  detail: >-
+    Lifesize versions its products (Icon system software, Admin Console, web/desktop app,
+    mobile apps, Lifesize Share, Fusion series) rather than versioning an API path or
+    header. Cloud Services changes are published by date with no version number at all.
+  docs: https://support.lifesize.com/product/release-notes/
+release_notes:
+- product: Cloud Services
+  url: https://support.lifesize.com/product/release-notes/cloud-services/
+- product: Icon 400/450/600
+  url: https://support.lifesize.com/product/release-notes/icon-400-450-600/
+- product: Icon 300/500/700
+  url: https://support.lifesize.com/product/release-notes/icon-300-500-700-release-notes/
+- product: Desktop and Web App
+  url: https://support.lifesize.com/product/release-notes/web-and-desktop-app/
+- product: Admin Console
+  url: https://support.lifesize.com/product/release-notes/admin-console/
+- product: Lifesize Mobile Apps
+  url: https://support.lifesize.com/product/release-notes/lifesize-mobile-apps/
+- product: Lifesize Room Controller App
+  url: https://support.lifesize.com/product/release-notes/lifesize-room-controller-app/
+- product: Fusion Series
+  url: https://support.lifesize.com/product/release-notes/fusion-series/
+- product: Lifesize Share
+  url: https://support.lifesize.com/product/lifesize-share/release-notes/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: >-
+    No published API deprecation policy, no RFC 8594 Sunset/Deprecation header support,
+    and no documented end-of-life schedule for API surfaces. Product end-of-life is
+    handled through support and sales channels, not a published developer policy. No
+    Deprecation pointer is emitted.
+sla:
+  url: null
+  uptime_target: null
+  detail: No publicly published uptime SLA for the Lifesize Cloud service.
+status_page: https://status.lifesizecloud.com/
+status_page_platform: Atlassian Statuspage
+status_page_components:
+- Audio Call Service
+- Call Management Service
+- Chat Service
+- Community
+- Kaptivo
+- Lifesize Icon
+- Lifesize Share
+- Management Console
+- Multiway Call Service
+- Recording Service
+- Web Application call service
+deprecated_operations: []
+corporate:
+  status: acquired
+  acquired_by: Enghouse Systems
+  year: 2023
+  operates_as: Enghouse Video (Vidyo Inc.)
+  announcement: https://www.enghouse.com/news-2023/enghouse-systems-completes-lifesize-acquisition/
+  brand_page: https://www.enghousevideo.com/lifesize
+  note: >-
+    lifesize.com now redirects (HTTP 200 after redirect) to
+    https://www.enghousevideo.com/lifesize. The Lifesize product line, support site,
+    status page, and cloud service remain in operation under Enghouse Video.

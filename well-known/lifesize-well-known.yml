@@ -1,0 +1,80 @@
+generated: '2026-07-19'
+method: searched
+result: none
+note: >-
+  Every /.well-known/ path and machine-readable discovery document was probed on the
+  Lifesize API, website, support, and successor hosts on 2026-07-19. None returned 200.
+  api.lifesizecloud.com is an AWS API Gateway edge that answers 403 to every
+  unauthenticated path, so its 403s are a blanket refusal rather than evidence of a
+  present-but-protected document. No WellKnown or SecurityTxt pointer is emitted because
+  no document was found.
+hosts:
+- host: https://api.lifesizecloud.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /llms.txt
+    status: 403
+  - path: /openapi.json
+    status: 403
+  - path: /swagger.json
+    status: 403
+- host: https://www.lifesize.com
+  redirects_to: https://www.enghousevideo.com/lifesize
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /llms.txt
+    status: 301
+- host: https://support.lifesize.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+- host: https://www.enghousevideo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404

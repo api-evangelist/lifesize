@@ -1,0 +1,52 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.lifesize.com/product/release-notes/cloud-services/
+index: https://support.lifesize.com/product/release-notes/
+scheme: date-based
+current_version: null
+scheme_notes: >-
+  The Cloud Services release notes carry no version numbers — each entry is identified
+  by date, most recent first, grouped by service (Calendar, Cloud Services, SFU,
+  Reporting). Device and app products (Icon, Admin Console, web/desktop, mobile) keep
+  their own separately versioned release-note pages.
+feeds:
+  rss: null
+entries:
+- date: '2026-05-18'
+  product: Cloud Services
+  breaking: false
+  highlights:
+  - Fixed an issue where captions did not work when the live streaming player was embedded
+    into an HTML5 webpage.
+- date: '2026-05-01'
+  product: Cloud Services
+  breaking: false
+  highlights:
+  - Added transcript download for live stream recordings with captions enabled, from the
+    Admin Console.
+- date: '2026-01-27'
+  product: Cloud Services
+  breaking: false
+  highlights:
+  - Introduced live captioning for live stream viewers, with new toggle controls and a CC
+    button on the media player.
+- date: '2025-01-09'
+  product: Calendar Service
+  breaking: false
+  highlights:
+  - Fixed Google Workspace time-zone handling.
+  - Fixed Microsoft Teams mobile invitation handling.
+- date: '2024-10-02'
+  product: Calendar Service
+  breaking: true
+  highlights:
+  - Microsoft 365 calendar permissions update required by customers.
+- date: '2024-07-02'
+  product: Cloud Services
+  breaking: false
+  highlights:
+  - Added one-click join for Microsoft Teams, Google Meet, and Zoom meetings from calendar
+    invitations.
+window_note: >-
+  Recent window only. The live release-notes pages are the source of truth and span
+  February 2020 (free account launch) through May 2026.

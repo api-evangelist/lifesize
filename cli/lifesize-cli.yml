@@ -1,0 +1,58 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+name: Lifesize Automation Command Line Interface (CLI)
+description: >-
+  The Lifesize Automation Command Line Interface provides a command line-based entry
+  point for automating access and control of Lifesize video communications systems.
+  It is not a workstation-installed CLI distributed through a package registry — it is
+  built into the Lifesize Icon system firmware and reached by connecting to the device.
+kind: on-device
+install:
+- method: built-in
+  detail: >-
+    Ships with Lifesize Icon system software; nothing to install. Connect to the system
+    over the network.
+access:
+- transport: ssh
+  detail: Sign in to the Lifesize video system through an SSH connection over the network.
+- transport: https
+  detail: Sign in to the Lifesize video system through an HTTP connection over the network.
+authentication: >-
+  Administrator credentials — the same authentication policy that governs browser access
+  to the system. See authentication/lifesize-authentication.yml.
+reference:
+  cli: https://{videoSystemIPAddress}/docs/clish
+  rest: https://{videoSystemIPAddress}/docs/json
+  note: >-
+    Both references are served by the device itself at its own address; there is no
+    public hosted copy of the command reference.
+syntax:
+  form: <actor> <command> <parameters>
+  parameter_separator: ','
+  discovery:
+  - Enter "help" for the command list.
+  - Press Tab to navigate and complete commands.
+  - Use "<actor> ?" to list the commands available for an actor.
+capability_groups:
+- name: configuration
+  description: Retrieve configuration information from the system, such as system version
+    and camera settings.
+- name: preferences
+  description: Modify system preferences, such as speaker volume, bandwidth, and auto-answer.
+- name: call status
+  description: Display call status and statistics.
+- name: call control
+  description: Control aspects of the system, including adding participants to a call and
+    emulating remote-control functions.
+supported_systems:
+- Lifesize Icon 300
+- Lifesize Icon 400
+- Lifesize Icon 450
+- Lifesize Icon 500
+- Lifesize Icon 600
+- Lifesize Icon 700
+- Lifesize Icon 800
+not_found:
+- a downloadable or package-managed CLI binary (no npm, PyPI, Homebrew, or GitHub release
+  found for Lifesize as of 2026-07-19)

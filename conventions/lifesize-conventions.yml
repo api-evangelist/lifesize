@@ -1,0 +1,67 @@
+generated: '2026-07-19'
+method: searched
+source: https://support.lifesize.com/product/lifesize-icon-400-450-600-800/advanced-topics/api-overview/
+scope: Lifesize Icon Automation API (REST + CLI)
+authentication:
+  style: administrator credentials over HTTPS or SSH
+  detail: >-
+    Access uses the same authentication policy as browser access to the system. There is
+    no token or API-key issuance surface.
+  artifact: authentication/lifesize-authentication.yml
+resource_model:
+  style: rest
+  detail: >-
+    "The API supports a REST method for accessing a set of resources, or objects, through
+    a fixed set of operations." Documented verbatim on the API overview page.
+  self_documenting: true
+  reference_endpoints:
+    rest: https://{videoSystemIPAddress}/docs/json
+    cli: https://{videoSystemIPAddress}/docs/clish
+command_syntax:
+  form: <actor> <command> <parameters>
+  parameter_separator: ','
+  help:
+  - help
+  - Tab completion
+  - <actor> ?
+media_type:
+  request: not documented
+  response: application/json (implied by the /docs/json reference endpoint)
+idempotency:
+  supported: false
+  detail: >-
+    Lifesize documents no idempotency key, no request-deduplication header, and no retry
+    contract for the Icon automation API. No Idempotency pointer is emitted.
+pagination:
+  supported: unknown
+  detail: Not documented in the published API overview.
+field_expansion:
+  supported: unknown
+  detail: Not documented.
+metadata:
+  supported: unknown
+  detail: Not documented.
+request_tracing:
+  request_id_header: not documented
+versioning:
+  scheme: product-release
+  detail: >-
+    The API surface tracks Lifesize Icon system software releases rather than a versioned
+    API path or header. Changes are announced in the per-product release notes.
+  artifact: lifecycle/lifesize-lifecycle.yml
+  changelog: changelog/lifesize-changelog.yml
+error_envelope:
+  format: not documented
+  rfc9457: false
+  detail: >-
+    No published error reference or problem-details contract. No errors/ artifact is
+    produced rather than fabricating one.
+rate_limiting:
+  documented: false
+  detail: >-
+    No rate-limit policy or rate-limit response headers are documented. The API is a
+    device-local control interface, not a metered multi-tenant service.
+deployment_note: >-
+  Because the API is served by each Lifesize Icon system at its own network address,
+  there is no single public base URL, no shared sandbox, and no central developer
+  onboarding. Every convention above is scoped to a customer-operated device.
