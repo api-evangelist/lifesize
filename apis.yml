@@ -28,15 +28,17 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  - {url: 'https://lifesize.com', status: 301, note: 'declared website redirects to https://www.enghousevideo.com/lifesize — a different registrable domain (lifesize.com -> enghousevideo.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
+  generated: '2026-09-03'
   method: derived
 image: https://www.enghousevideo.com/wp-content/uploads/2024/04/Enghouse-lifesize-icon-white.png
 x-type: company
